@@ -9,14 +9,18 @@ for fruit in fruits:
 for i in change:
 	print "I got %r" % i
 
-elements = []
+# elements = []
 
-for i in range(0,6):
-	print "Adding %d to the list." % i
-	elements.append(i)
-	print elements
+# for i in range(0,6):
+# 	print "Adding %d to the list." % i
+# 	elements.append(i)
+# 	print elements
 
-for i in elements:
-	print "Element was %d" % i
+# for i in elements:
+# 	print "Element was %d" % i
 
+more_elements =[]
 
+for i in range(6,18):
+	print "adding %d to the new list" % i
+	new_list = [i] + more_elements
