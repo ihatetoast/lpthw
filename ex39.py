@@ -13,16 +13,41 @@
 states = {
 	'Oregon': 'OR',
 	'Florida': 'FL',
-	'California': 'CA',
 	'New York': 'NY',
-	'Michigan': 'MI'
+	'Michigan': 'MI',
+	'Texas': 'TX',
+	'Hawaii': 'HI',
+	'Alabama': 'AL',
+	'Alaska': 'AK',
+	'Arizona': 'AZ',
+	'Arkansas': 'AR',
+	'California': 'CA',
+	'Colorado': 'CO',
+	'Connecticut': 'CT',
+	'Delaware': 'DE'
+
 }
 
 # create a basic set of states and some citites in them
 cities = {
 	'CA': 'San Francisco',
+	'MI': 'Ann Arbor',
+	'FL': 'Miami',
+	'IA': 'Pella',
+	'CT': 'New Haven',
+	'AK': 'Fairbanks',
+	'AZ': 'Tucsan',
+	'CO': 'Durango',
+}
+capitals = {
+	'CA': 'Sacramento',
 	'MI': 'Detroit',
-	'FL': 'Jacksonville'
+	'FL': 'Jacksonville',
+	'IA': 'Des Moines',
+	'CT': 'Hartford',
+	'AK': 'Juneaur',
+	'AZ': 'Phoenix',
+	'CO': 'Denver',
 }
 
 # add some more cities
