@@ -30,7 +30,7 @@ class Engine(object):
         last_scene = self.scene_map.next_scene('finished')
         
         while current_scene != last_scene:
-            next_scene_name=current_scene.enter()
+            next_scene_name = current_scene.enter()
             current_scene = self.scene_map.next_scene(next_scene_name)
 
         current_scene.enter()
@@ -65,7 +65,7 @@ class CentralCorridor(Scene):
 
         action = raw_input("> ")
 
-         if action == "shoot":
+        if action == "shoot":
             print "Quick on the draw you yank out your blaster and fire it at the Gothon."
             print "His clown costume is flowing and moving around his body, which throws"
             print "off your aim.  Your laser hits his costume but misses him entirely.  This"
@@ -108,13 +108,16 @@ class LaserWeaponArmory(Scene):
         print "wrong 10 times then the lock closes forever and you can't"
         print "get the bomb.  The code is 3 digits."
 
-        code = "%d%d%d" % (randint(1,9)), (randint(1,9)), (randint(1,9))
+        code = "%d%d%d" % ((randint(1,9)), (randint(1,9)), (randint(1,9)))
         guess = raw_input("[keypad] > ")
         guesses = 0
 
-        while guess != code and guesses <9:
+        while guess != code and guesses <10:
             print "beep boop boop beep baaaaap"
             guesses += 1
+            print "Number of guesses so far: ", guesses
+            guess = raw_input("[keypad] > ")
+
         if guess == code:
             print "The container clicks open and the seal breaks, letting gas out."
             print "You grab the neutron bomb and run as fast as you can to the"
