@@ -8,4 +8,6 @@ print words
 print "words length is "
 wordsLength = len(words)
 print wordsLength
+words.extend(["boogers", "feet"])
+print words
 
