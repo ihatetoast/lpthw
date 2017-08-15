@@ -12,6 +12,7 @@ class Scene(object):
         pass
 
 class DayRuined(Scene):
+    
     sledges = [
         "You stepped in poop. Your day is ruined.",
         "You accidentally wiped your forehead with the poop bag. Your day is ruined.",

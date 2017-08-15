@@ -63,7 +63,7 @@ class CentralCorridor(Scene):
         print "Armory and about to pull a weapon to blast you."
         print "What will you do: shoot, dodge, tell a joke?"
 
-        action = raw_input("> ")
+        action = raw_input("Choose one: shoot, dodge, or tell a joke > ")
 
         if action == "shoot":
             print "Quick on the draw you yank out your blaster and fire it at the Gothon."
@@ -215,7 +215,7 @@ class Map(object):
         'the_bridge': TheBridge(),
         'escape_pod': EscapePod(),
         'death': Death(),
-        'finished': Finished(),
+        'finished': Finished()
     }
 
     def __init__(self, start_scene):
