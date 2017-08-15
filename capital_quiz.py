@@ -6,169 +6,176 @@ print('Name the capitals!')
 print('Instructions:')
 print('You will be given a US state.')
 print('Give the correct capital to gain a point.')
-print('Use only lowercase letters in your answers.')
-print('For example:')
-print('if the capital is Sacremento, write sacremento with a small s.')
+
 print('Here we go: '+ '\n'*3)
 
 def check_capital (user_cap, answer_cap):
     ## changes to var seen throughout program
     global score
-    if user_cap == answer_cap:
-        print('Huzzah!')
+    user_guessing = True
+    guesses = 0
+    while user_guessing and guesses <3:  
+      if user_cap.lower() == answer_cap.lower():
+        print('Correct you are!')
         score = score +1
-        print('Your score: ' + str(score))
+        user_guessing = False
+      else:
+        if guesses < 2:
+          user_cap = input('Oh noes. Try again.')
+        guesses = guesses + 1
+    if guesses == 3:
+      print('The capital is ' + answer_cap)
+
 score = 0
 
-##py v2.7:
-##texas = raw_input('Texas > ')
-
-alabama = input('alabama > ')
+alabama = input('Alabama > ')
 check_capital(alabama, 'montgomery')
 
-alaska = input('alaska > ')
+alaska = input('Alaska > ')
 check_capital(alaska, 'juneau')
 
-arizona = input('arizona > ')
+arizona = input('Arizona > ')
 check_capital(arizona, 'phoenix')
 
-arkansas = input('arkansas > ')
+arkansas = input('Arkansas > ')
 check_capital(arkansas, 'little rock')
 
-california = input('california > ')
+california = input('California > ')
 check_capital(california, 'sacramento')
 
-colorado = input('colorado > ')
+colorado = input('Colorado > ')
 check_capital(colorado, 'denver')
 
-connecticut = input('connecticut > ')
+connecticut = input('Connecticut > ')
 check_capital(connecticut, 'hartford')
 
-delaware = input('delaware > ')
+delaware = input('Delaware > ')
 check_capital(delaware, 'dover')
 
-florida = input('florida > ')
+florida = input('Florida > ')
 check_capital(florida, 'tallahassee')
 
-georgia = input('georgia > ')
+georgia = input('Georgia > ')
 check_capital(georgia, 'atlanta')
 
-hawaii = input('hawaii > ')
+hawaii = input('Hawaii > ')
 check_capital(hawaii, 'honolulu')
 
-idaho = input('idaho > ')
+idaho = input('Idaho > ')
 check_capital(idaho, 'boise')
 
-illinois = input('illinois > ')
+illinois = input('Illinois > ')
 check_capital(illinois, 'springfield')
 
-indiana = input('indiana > ')
+indiana = input('Indiana > ')
 check_capital(indiana, 'indianapolis')
 
-iowa = input('iowa > ')
+iowa = input('Iowa > ')
 check_capital(iowa, 'des moines')
 
-kansas = input('kansas > ')
+kansas = input('Kansas > ')
 check_capital(kansas, 'topeka')
 
-kentucky = input('kentucky > ')
+kentucky = input('Kentucky > ')
 check_capital(kentucky, 'frankfort')
 
-louisiana = input('louisiana > ')
+louisiana = input('Louisiana > ')
 check_capital(louisiana, 'baton rouge')
 
-maine = input('maine > ')
+maine = input('Maine > ')
 check_capital(maine, 'augusta')
 
-maryland = input('maryland > ')
+maryland = input('Maryland > ')
 check_capital(maryland, 'annapolis')
 
-massachusetts = input('massachusetts > ')
+massachusetts = input('Massachusetts > ')
 check_capital(massachusetts, 'boston')
 
-michigan = input('michigan > ')
+michigan = input('Michigan > ')
 check_capital(michigan, 'lansing')
 
-minnesota = input('minnesota > ')
+minnesota = input('Minnesota > ')
 check_capital(minnesota, 'st. paul')
 
-mississippi = input('mississippi > ')
+mississippi = input('Mississippi > ')
 check_capital(mississippi, 'jackson')
 
-missouri = input('missouri > ')
+missouri = input('Missouri > ')
 check_capital(missouri, 'jefferson city')
 
-montana = input('montana > ')
+montana = input('Montana > ')
 check_capital(montana, 'helena')
 
-nebraska = input('nebraska > ')
+nebraska = input('Nebraska > ')
 check_capital(nebraska, 'lincoln')
 
-nevada = input('nevada > ')
+nevada = input('Nevada > ')
 check_capital(nevada, 'carson city')
 
-new_hampshire = input('new hampshire > ')
+new_hampshire = input('New Hampshire > ')
 check_capital(new_hampshire, 'concord')
 
-new_jersey = input('new jersey > ')
+new_jersey = input('New Jersey > ')
 check_capital(new_jersey, 'trenton')
 
-new_mexico = input('new mexico > ')
+new_mexico = input('New Mexico > ')
 check_capital(new_mexico, 'santa fe')
 
-new_york = input('new york > ')
+new_york = input('New York > ')
 check_capital(new_york, 'albany')
 
-north_carolina = input('north carolina > ')
+north_carolina = input('North Carolina > ')
 check_capital(north_carolina, 'raleigh')
 
-north_dakota = input('north dakota > ')
+north_dakota = input('North Dakota > ')
 check_capital(north_dakota, 'bismark')
 
-ohio = input('ohio > ')
+ohio = input('Ohio > ')
 check_capital(ohio, 'columbus')
 
-oklahoma = input('oklahoma > ')
+oklahoma = input('Oklahoma > ')
 check_capital(oklahoma, 'oklahoma city')
 
-oregon = input('oregon > ')
+oregon = input('Oregon > ')
 check_capital(oregon, 'salem')
 
-pennsylvania = input('pennsylvania > ')
+pennsylvania = input('Pennsylvania > ')
 check_capital(pennsylvania, 'harrisburg')
 
-rhode_island = input('rhode island > ')
+rhode_island = input('Rhode Island > ')
 check_capital(rhode_island, 'providence')
 
-south_carolina = input('south carolina > ')
+south_carolina = input('South Carolina > ')
 check_capital(south_carolina, 'columbia')
 
-south_dakota = input('south dakota  > ')
+south_dakota = input('South Dakota  > ')
 check_capital(south_dakota, 'pierre')
 
-tennessee = input('tennessee > ')
+tennessee = input('Tennessee > ')
 check_capital(tennessee, 'nashville')
 
-texas = input('texas > ')
+texas = input('Texas > ')
 check_capital(texas, 'austin')
 
-utah = input('utah > ')
+utah = input('Utah > ')
 check_capital(utah, 'salt lake city')
 
-vermont = input('vermont > ')
+vermont = input('Vermont > ')
 check_capital(vermont, 'montpelier')
 
-virginia = input('virginia > ')
+virginia = input('Virginia > ')
 check_capital(virginia, 'richmond')
 
-washington = input('washington > ')
+washington = input('Washington > ')
 check_capital(washington, 'olympia')
 
-west_virginia = input('west virginia > ')
+west_virginia = input('West Virginia > ')
 check_capital(west_virginia, 'charleston')
 
-wisconsin = input('wisconsin > ')
+wisconsin = input('Wisconsin > ')
 check_capital(wisconsin, 'madison')
 
-wyoming = input('wyoming > ')
+wyoming = input('Wyoming > ')
 check_capital(wyoming, 'cheyenne')
+
+print('Your score: ' + str(score))
